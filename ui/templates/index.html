@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/style.css') }}" />
+  </head>
+  <body>
+    <h1>Credit Score Prediction App</h1>
+    <p>Please fill in all of the factors for evaluating credit score below & press the predict button:</p>
+
+    <div class="form-container">
+      <form action="/predict_with_ui" method="post">
+        <label for="loan">loan :</label>
+        <input type="number" name="loan" id="loan" placeholder="ex: 2000" required /> <br />
+        <br />
+
+        <label for="mortdue">mortdue :</label>
+        <input type="number" name="mortdue" id="mortdue" placeholder="ex: 25000.0" required /> <br />
+        <br />
+
+        <label for="value">value :</label>
+        <input type="number" name="value" id="value" placeholder="ex: 39025.0" required /> <br />
+        <br />
+
+        <label for="reason">reason : (1.DebtCon|2.HomeImp|3.Other)</label>
+        <input type="number" min=1 max=3 name="reason" id="reason" placeholder="ex: 1" required /> <br />
+        <br />
+
+        <label for="job">job : (1.Other|2.Office|3.Sales|4Mgr|5.ProfExe|6.Self)</label>
+        <input type="number" min=1 max=6 name="job" id="job" placeholder="ex: 1" required /> <br />
+        <br />
+
+        <label for="yoj">yoj :</label>
+        <input type="number" name="yoj" id="yoj" placeholder="ex: 12.5" required /> <br />
+        <br />
+
+        <label for="derog">derog :</label>
+        <input type="number" name="derog" id="derog" placeholder="ex: 0.0" required /> <br />
+
+        <br />
+        <label for="delinq">delinq :</label>
+        <input type="number" name="delinq" id="delinq" placeholder="ex: 0.0" required /> <br />
+
+        <br />
+
+        <label for="clage">clage :</label>
+        <input type="number" name="clage" id="clage" placeholder="ex: 95.36" required /> <br />
+
+        <br />
+
+        <label for="ninq">ninq :</label>
+        <input type="number" name="ninq" id="ninq" placeholder="ex: 1.0" required /> <br />
+
+        <br />
+
+        <label for="clno">clno :</label>
+        <input type="number" name="clno" id="clno" placeholder="ex: 9.0" required /> <br />
+
+        <br />
+
+        <label for="debtinc">debtinc :</label>
+        <input type="number" name="debtinc" id="debtinc" placeholder="ex: 10.0" required /> <br />
+
+        <br />
+        <button type="submit">Predict Credit Score</button>
+      </form>
+    </div>
+  </body>
+</html>
