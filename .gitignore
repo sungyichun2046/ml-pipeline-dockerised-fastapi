@@ -1,0 +1,7 @@
+**/__pycache__/
+.idea/
+
+# Output files
+deployment/kubernetes/concurrent_requests_CPU_Intensive_False.csv
+deployment/kubernetes/concurrent_requests_CPU_Intensive_True.csv
+
